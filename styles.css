@@ -64,6 +64,7 @@ img {
 /* start of header styles */
 
 header {
+    /* Jenny said I could use the smallest size image in all cases */
     background:url(assets/headerBackground.jpg);
 	background-size: cover;
 	background-position: left-top;
@@ -85,7 +86,6 @@ header {
 h1 {
     font-size: 7.3rem;
     background:rgba(227,228,234,0.89);
-    display: inline-block;
     line-height: 120px;
     position: absolute;
     top: 55%;
@@ -103,7 +103,6 @@ h1 span {
     margin: 0 auto;
     width: 40%;
     padding: 0;
-    text-align: center;
 }
 
 .menu ul li {
@@ -150,7 +149,6 @@ h1 span {
 .fullBleed.specialize {
     background:url(assets/sneakerWall.jpg);
     background-repeat: no-repeat;
-    background-size: 50%;
     background-position: top right;
 
 }
@@ -159,8 +157,6 @@ h1 span {
     background:url(assets/handShoePink.jpg);
 	background-repeat: no-repeat;
     background-position: 0 44%;
-    position: relative;
-    height: 508px;
 
 }
 
@@ -176,15 +172,13 @@ h1 span {
 }
 
 .careText {
-    position: absolute;
-    top: 0;
-    right: 0;
     padding: 120px;
+    float: right;
 }
 
 
 .fullBleed a,
-/* giving a tag also styled here */
+/* giving <a> tag also styled here */
 .giving a {
     color: #186684; 
     font-family: 'Nova Flat', cursive; 
@@ -193,9 +187,6 @@ h1 span {
     padding: 10px 15px;
     line-height: 29px;
 }
-
-
-/* Laura Chuong helped me with this full bleed section */
 
 /* beginning of giving styles */
 .giving {
@@ -384,10 +375,6 @@ input {
         padding: 90px;
     }
 
-    .fullBleed.care {
-        height: 450px;
-    }
-
     /* footer  */
 
     input {
@@ -424,9 +411,6 @@ input {
         padding: 100px;
     }
 
-    .fullBleed.care {
-        height: 465px;
-    }
 
     /* connect */
 
@@ -444,11 +428,10 @@ input {
     .careText {
         padding: 85px; 
     }
-YOU STOPPED HERE
-    /* .fullBleed.care {
-        background-position: -75% 44%;
-        height: 414px;
-    } */
+
+    .fullBleed.care {
+        background-position: -37% 44%;
+    }
 
 }
 
@@ -463,7 +446,6 @@ YOU STOPPED HERE
 
     .fullBleed.care {
         background-position: -75% 44%;
-        height: 414px;
     }
 
 }
@@ -478,16 +460,8 @@ YOU STOPPED HERE
     h1 {
         font-size: 5.3rem;
     }
-
-    /* specialize and care */
-
-    /* .fullBleed, */
-    .careImage {
-        height: 366px;
-    }
-
+    
     /* connect */
-
 
     .connectLinks {
         padding: 50px 0;
@@ -531,20 +505,9 @@ YOU STOPPED HERE
         padding: 70px
     }
 
-/* FIX THE PADDING HERE  */
-
-/* .specializeText {
-    padding: 50px 50px 63px 108px;
-
 }
 
-.careText {
-    padding: 50px 108px 43px 50px;
-}
- */
-}
-
-@media (max-width: 1001px) {
+@media (max-width: 1008px) {
     
     /* header */
     
@@ -567,8 +530,10 @@ YOU STOPPED HERE
 
     /* specialize and care */
 
-    .specializeText {
-        padding-bottom: 10px;
+
+    .specializeText,
+    .careText {
+        padding: 55px
     }
 
     .fullBleed.specialize h2,
@@ -577,7 +542,7 @@ YOU STOPPED HERE
     }
 
     .fullBleed.care {
-        background-position: -175% 44%; 
+        background-position: -175% 44%;
 
     }
 
@@ -617,25 +582,36 @@ YOU STOPPED HERE
 
 @media (max-width: 1060px) {
 
-       /* care and specialize  */
-
-    /* .specializeText {
-        padding: 30px 50px 53px 98px;
+    /* specialize and care */
+    
+    .specializeText,
+    .careText {
+        padding: 68px;
     }
 
-    .careText {
-        padding: 49px 90px 43px 50px;
-    } */
 
     .fullBleed.care {
         background-position: -155px 39%; 
     }
 }
 
-@media (max-width: 980px) {
+@media (max-width: 987px) {
+    
+    /* specialize and care */
+    
+    .specializeText,
     .careText {
-        padding: 49px 90px 61px 50px;
+        padding: 48px;
     }
+
+}
+
+@media (max-width:957px) {
+    .specializeText,
+    .careText {
+        padding: 35px;
+    }
+
 }
 
 @media (max-width: 880px) {
@@ -673,6 +649,11 @@ YOU STOPPED HERE
         height: 100%;
         width: 100%;
     }
+
+    .specializeImage img,
+    .careImage img {
+        width: 100%;
+    }
      
 
     .careImage {
@@ -700,23 +681,14 @@ YOU STOPPED HERE
         margin-bottom: 100px;
     }
 
-    /* HERE IS THE ISSUE */
-
-    .inputButton {
-        text-align: center;
-        margin: 0 auto;
-    }
-
     .update input {
         padding: 10px 90px;
-        margin: 0 auto;
-        text-align: center;
+        float: none;
     }
 
     .update button {
         padding: 10px 143px;
-        /* margin: 0 auto;
-        text-align: center; */
+        float: none;
     }
 
     footer .menu ul {
@@ -759,7 +731,6 @@ YOU STOPPED HERE
 
     .connectLinks li { 
         width: 100%;
-        font-size: 2rem;
     }
 
     /* the gram */
@@ -799,14 +770,6 @@ YOU STOPPED HERE
     footer .menu ul {
         width: 90%;
     }
-
-    /* .update input {
-        padding: 10px 50px;
-    }
-
-    .update button {
-        padding: 6px 104px;
-    } */
 }
 
 @media (max-width: 440px) {
@@ -822,11 +785,6 @@ YOU STOPPED HERE
         left: 15%;
     }
 
-    /* connect */
-    
-    .connectLinks li {
-        font-size: 0.8rem;
-    }
 
     /* footer */
 
@@ -900,11 +858,6 @@ YOU STOPPED HERE
 
 To Do:
 
-Hey, I'm having trouble sizing some items in a responsive way. I'm sitting in the main classroom 
-white space after specialize and care images at 865px- hot mess again
-
-I'm having trouble applying margin: 0 auto on two elements I'm sitting in the main classroom 
-fix the buttons at the bottom- they do not align center or margin 0 TRY BOTH (from flexbox exercise)
 
 I'm having some mysterious whitespace after a nav. I'm sitting in the main classroom. 
 white space after footer menu
