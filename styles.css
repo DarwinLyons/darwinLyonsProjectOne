@@ -46,7 +46,7 @@ header nav,
 footer nav,
 button {
     font-family: 'Nova Flat', cursive;
-    color: #186684;
+    color: rgb(24, 102, 132);
     font-weight: 400;
 }
 
@@ -75,7 +75,7 @@ header {
 }
 
 .hamburger {
-    color: #186684; 
+    color: rgb(24, 102, 132); 
     position: absolute;
     top: 0;
     right: 14%;
@@ -111,7 +111,7 @@ h1 span {
 }
 
 .menu ul li:hover {
-    color: #e85b26;
+    color: rgb(232, 91, 38);
 }
 
 .social {
@@ -129,7 +129,7 @@ h1 span {
 }
 
 .social a {
-    color: #e85b26;
+    color: rgb(232, 91, 38);
 }
 
 /* end of header styles */
@@ -168,7 +168,7 @@ h1 span {
 } 
 
 .specializeText {
-    padding: 105px;
+    padding: 120px;
 }
 
 .careText {
@@ -180,10 +180,10 @@ h1 span {
 .fullBleed a,
 /* giving <a> tag also styled here */
 .giving a {
-    color: #186684; 
+    color: rgb(24, 102, 132); 
     font-family: 'Nova Flat', cursive; 
     text-transform: uppercase;
-    border: 3px solid #e85b26;
+    border: 3px solid rgb(232, 91, 38);
     padding: 10px 15px;
     line-height: 29px;
 }
@@ -246,12 +246,12 @@ h1 span {
 }
 
 .connectLinks h3 {
-    color: #186684;
+    color: rgb(24, 102, 132);
     font-weight: 400;
 }
 
 .connectLinks i {
-    color: #e85b26;
+    color: rgb(232, 91, 38);
 }
 
 /* beginning of gram styles */
@@ -304,13 +304,13 @@ h1 span {
 
 h3 {
     font-family:'Nova Flat', cursive;
-    color:#e85b26;
+    color:rgb(232, 91, 38);
     margin: 0; 
 }
 
 .menu .two {
     padding: 100px 0 25px;
-    color: #1f2022;
+    color: rgb(31, 32, 34);
 }
 
 .contact ul {
@@ -323,11 +323,11 @@ h3 {
 }
 
 .phone {
-    border-left: 2px solid #1f2022;
+    border-left: 2px solid rgb(31, 32, 34);
     padding-left: 5px; 
 }
 
-input,
+.update input,
 .update button {
     float: left;
 }
@@ -342,15 +342,15 @@ input {
 
 .update button {
     padding: 10px 20px;
-    background-color: #186684;
-    color: #fff;
+    background-color: rgb(24, 102, 132);
+    color: rgb(255, 255, 255);
     font-size: .9rem;
-    border: 2px solid #e85b26;
+    border: 2px solid rgb(232, 91, 38);
     text-transform: uppercase; 
 }
 
 .copywrite {
-    background: #000000;
+    background: rgb(0,0,0);
     width: 100%;
     color: rgba(252, 252, 252, 0.5);
     text-align: center;
@@ -404,12 +404,6 @@ input {
         padding: 0 15px 0 0;
     }
 
-    /* specialize and care */
-
-    .specializeText,
-    .careText {
-        padding: 100px;
-    }
 
 
     /* connect */
@@ -420,35 +414,12 @@ input {
 
 }
 
-@media (max-width: 1170px) {
-
-    /* specialize and care */
-
-    .specializeText,
-    .careText {
-        padding: 85px; 
-    }
-
+@media (max-width: 1108px) {
     .fullBleed.care {
-        background-position: -37% 44%;
+        background-position: -77% 44%; 
     }
-
 }
 
-@media (max-width: 1107px) {
-
-    /* specialize and care */
-
-    .specializeText,
-    .careText {
-        padding: 72px; 
-    }
-
-    .fullBleed.care {
-        background-position: -75% 44%;
-    }
-
-}
 
 @media (max-width: 1065px) {
     
@@ -496,16 +467,6 @@ input {
     }
 }
 
-@media (max-width: 1095px) {
-
- /* specialize and care */
-
-    .specializeText,
-    .careText {
-        padding: 70px
-    }
-
-}
 
 @media (max-width: 1008px) {
     
@@ -513,6 +474,11 @@ input {
     
     .hamburger {
         visibility: visible;
+    }
+
+    header .menu,
+    .social {
+        display: none;
     }
 
     h1 {
@@ -523,10 +489,6 @@ input {
         background-position: 20%;
     }
 
-    header .menu,
-    .social {
-        display: none;
-    }
 
     /* specialize and care */
 
@@ -595,24 +557,6 @@ input {
     }
 }
 
-@media (max-width: 987px) {
-    
-    /* specialize and care */
-    
-    .specializeText,
-    .careText {
-        padding: 48px;
-    }
-
-}
-
-@media (max-width:957px) {
-    .specializeText,
-    .careText {
-        padding: 35px;
-    }
-
-}
 
 @media (max-width: 880px) {
 
@@ -658,7 +602,6 @@ input {
 
     .careImage {
         border-image-repeat: none;
-
     }
 
     /* connect*/
@@ -822,11 +765,19 @@ input {
     /* footer */
 
     .menu .two li {
-        padding: 10px 15px;
+        padding: 10px 10px;
     }
 
+    .contact {
+        margin-bottom: 50px;
+    }
+
+    .contactUpdateContainer {
+        padding-bottom: 50px;
+    }
+
+
     .update p {
-        font-size: 0.7rem;
         margin: 0 0 10px 0;
     }
 
@@ -852,6 +803,26 @@ input {
 
     }
 
+    /* footer */
+
+    .menu .two li {
+        padding: 10px 10px;
+        font-size: 0.8rem; 
+    }
+    footer h3 {
+        font-size: 1rem;
+
+    }
+
+     .contact li {
+        font-size: 0.7rem;
+    }
+
+     .update p {
+        font-size: 0.7rem;
+        margin: 0 0 10px 0;
+    }
+
 }
 
 /* Questions:
@@ -863,7 +834,6 @@ I'm having some mysterious whitespace after a nav. I'm sitting in the main class
 white space after footer menu
 
 GO over for Dry and Indent
-go over requirements
 
 
  */
