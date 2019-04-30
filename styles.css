@@ -1,0 +1,916 @@
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:\201C \201D \2018 \2019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button],/* 1 */input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}button[disabled],input[disabled]{cursor:default;}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}body,figure{margin:0;}legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.visuallyHidden:not(:focus):not(:active) { position: absolute; width: 1px; height: 1px; margin: -1px;border: 0;padding: 0;white-space: nowrap;clip-path: inset(100%);clip: rect(00 0 0);overflow: hidden;}
+
+/* general styles */
+
+html {
+    font-size: 125%;
+}
+
+.wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.wrapperSmall {
+    max-width: 1152px;/* 80% of large wrapper */
+    width: 80%;
+    margin: 0 auto;
+}
+body {
+    letter-spacing: 0;
+    color: #1f2022;
+    background-color: #f4f4f4;
+}
+
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+
+p {
+    font-family: 'Catamaran', sans-serif;
+}
+
+h1,
+h2,
+header nav,
+footer nav,
+button {
+    font-family: 'Nova Flat', cursive;
+    color: #186684;
+    font-weight: 400;
+}
+
+
+li {
+	list-style: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+/* end of general styles */
+
+/* start of header styles */
+
+header {
+    background:url(assets/headerBackground.jpg);
+	background-size: cover;
+	background-position: left-top;
+	min-height: 100vh;
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.hamburger {
+    color: #186684; 
+    position: absolute;
+    top: 0;
+    right: 14%;
+    visibility: hidden;
+    font-size: 2rem;
+}
+
+h1 {
+    font-size: 7.3rem;
+    background:rgba(227,228,234,0.89);
+    display: inline-block;
+    line-height: 120px;
+    position: absolute;
+    top: 55%;
+    left: 40%;
+    padding: 10px;
+    margin: 0;
+}
+
+h1 span {
+    display: block;
+}
+
+/* also styles footer menu */
+.menu ul {
+    margin: 0 auto;
+    width: 40%;
+    padding: 0;
+    text-align: center;
+}
+
+.menu ul li {
+    float: left;
+    padding: 10px 20px; 
+}
+
+.menu ul li:hover {
+    color: #e85b26;
+}
+
+.social {
+    float: right;
+    text-align: center;
+    padding: 10px;
+}
+
+.social ul {
+    padding: 200px 0;
+}
+
+.social ul li {
+    font-size: 1.2rem;
+}
+
+.social a {
+    color: #e85b26;
+}
+
+/* end of header styles */
+
+/* beginning of main styles */
+.specializeImage,
+.careImage {
+    display: none;
+}
+
+
+.specialize,
+.care {
+    background: white;
+}
+
+.fullBleed.specialize {
+    background:url(assets/sneakerWall.jpg);
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: top right;
+
+}
+
+.fullBleed.care {
+    background:url(assets/handShoePink.jpg);
+	background-repeat: no-repeat;
+    background-position: 0 44%;
+    position: relative;
+    height: 508px;
+
+}
+
+
+.specializeText,
+.careText {
+    width: 50%;
+    background: white;
+} 
+
+.specializeText {
+    padding: 105px;
+}
+
+.careText {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 120px;
+}
+
+
+.fullBleed a,
+/* giving a tag also styled here */
+.giving a {
+    color: #186684; 
+    font-family: 'Nova Flat', cursive; 
+    text-transform: uppercase;
+    border: 3px solid #e85b26;
+    padding: 10px 15px;
+    line-height: 29px;
+}
+
+
+/* Laura Chuong helped me with this full bleed section */
+
+/* beginning of giving styles */
+.giving {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.giveText h2 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.giveImage {
+    width: 30%;
+}
+
+.giveText {
+    width: 70%;
+    padding-left: 40px;
+}
+
+.giveImage,
+.giveText {
+    float: left;
+}
+
+
+
+/* end of giving styles */
+
+/* beginning of connect styles  */
+
+.connect {
+    background:url(assets/connectBackground.jpg);
+	background-position: left-top;
+	min-height: 100%;
+	background-repeat: no-repeat;
+    text-align: center;
+}
+
+.connectLinks {
+    padding: 100px 0;
+}
+
+.connectLinks ul {
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.connectLinks li {
+    float: left;
+    padding: 30px;
+    font-size: 1.1rem;
+    background-color: #f4f4f4;
+}
+
+.connectLinks h3 {
+    color: #186684;
+    font-weight: 400;
+}
+
+.connectLinks i {
+    color: #e85b26;
+}
+
+/* beginning of gram styles */
+
+.gram {
+    text-align: center;
+    background-color: white;
+}
+
+.gram h2 {
+    padding: 45px 0;
+    font-size: 2rem;
+    margin: 0;
+    font-weight: 400;
+}
+
+.sneakerGallery {
+    padding-bottom: 100px;
+    margin: 0 auto;
+}
+
+.gallery {
+    width: calc((100%/3) - 20px);
+    float: left;
+    margin-right: 20px;
+    padding: 0;
+}
+
+
+.gallery:nth-of-type(3) {
+    margin: 0;
+    padding: 0;
+}
+
+/* end of gram styles */
+
+/* end of main styles */
+
+/* start of footer styles */
+
+/* footer menu styled in header */
+.contactUpdateContainer {
+    padding-bottom: 100px;
+}
+.contact,
+.update {
+    width: 50%;
+    float: left;
+}
+
+h3 {
+    font-family:'Nova Flat', cursive;
+    color:#e85b26;
+    margin: 0; 
+}
+
+.menu .two {
+    padding: 100px 0 25px;
+    color: #1f2022;
+}
+
+.contact ul {
+    padding: 0;
+    margin: 0;
+}
+
+.contact li {
+    margin: 15px 0;
+}
+
+.phone {
+    border-left: 2px solid #1f2022;
+    padding-left: 5px; 
+}
+
+input,
+.update button {
+    float: left;
+}
+
+.update p {
+    margin: 0;
+}
+
+input {
+    padding: 10px 110px 10px 30px;
+}
+
+.update button {
+    padding: 10px 20px;
+    background-color: #186684;
+    color: #fff;
+    font-size: .9rem;
+    border: 2px solid #e85b26;
+    text-transform: uppercase; 
+}
+
+.copywrite {
+    background: #000000;
+    width: 100%;
+    color: rgba(252, 252, 252, 0.5);
+    text-align: center;
+    padding: 10px;
+}
+
+.copywrite p {
+    margin: 0;
+}
+
+/* end of footer styles */
+
+/* start of responsive styles */
+/* I asked Fatima and she said to use the text from the desktop display in the specialize, care and giving sections (it is different from the mobile to desktop version) */
+
+@media (max-width: 1300px) {
+
+    /* specialize and care */
+
+    .specializeText,
+    .careText {
+        padding: 90px;
+    }
+
+    .fullBleed.care {
+        height: 450px;
+    }
+
+    /* footer  */
+
+    input {
+        text-align: center;
+        padding: 10px 70px;
+    }
+
+    .update button {
+        padding: 12px 123px;
+        margin-top: 4px;
+    }
+
+}
+
+
+@media (max-width: 1230px) {
+    
+    /* header */
+    
+    h1 {
+        font-size: 6.3rem;
+        padding: 7px;
+        left: 55%;
+    }
+
+    .social ul {
+        padding: 0 15px 0 0;
+    }
+
+    /* specialize and care */
+
+    .specializeText,
+    .careText {
+        padding: 100px;
+    }
+
+    .fullBleed.care {
+        height: 465px;
+    }
+
+    /* connect */
+
+    .connectLinks li {
+        font-size: 0.9rem;
+    }
+
+}
+
+@media (max-width: 1170px) {
+
+    /* specialize and care */
+
+    .specializeText,
+    .careText {
+        padding: 85px; 
+    }
+YOU STOPPED HERE
+    /* .fullBleed.care {
+        background-position: -75% 44%;
+        height: 414px;
+    } */
+
+}
+
+@media (max-width: 1107px) {
+
+    /* specialize and care */
+
+    .specializeText,
+    .careText {
+        padding: 72px; 
+    }
+
+    .fullBleed.care {
+        background-position: -75% 44%;
+        height: 414px;
+    }
+
+}
+
+@media (max-width: 1065px) {
+    
+    /* Header */
+    
+    .menu {
+        font-size: 0.9rem;
+    }
+    h1 {
+        font-size: 5.3rem;
+    }
+
+    /* specialize and care */
+
+    /* .fullBleed, */
+    .careImage {
+        height: 366px;
+    }
+
+    /* connect */
+
+
+    .connectLinks {
+        padding: 50px 0;
+    }
+
+    .connectLinks li {
+        float: none; 
+        width: 40%;
+        margin: 0 auto;
+    }
+
+    /* footer */
+
+    .contactUpdateContainer {
+        padding: 0 0 100px 0;
+    }
+
+    .contactUpdateContainer h3 {
+        margin-bottom: 15px;
+    }
+
+    .contact {
+        text-align: center;
+    }
+
+    .contact li {
+        margin: 20px 0;
+    }
+
+    .update input {
+        margin-bottom: 5px;
+    }
+}
+
+@media (max-width: 1095px) {
+
+ /* specialize and care */
+
+    .specializeText,
+    .careText {
+        padding: 70px
+    }
+
+/* FIX THE PADDING HERE  */
+
+/* .specializeText {
+    padding: 50px 50px 63px 108px;
+
+}
+
+.careText {
+    padding: 50px 108px 43px 50px;
+}
+ */
+}
+
+@media (max-width: 1001px) {
+    
+    /* header */
+    
+    .hamburger {
+        visibility: visible;
+    }
+
+    h1 {
+        left: 35%;
+    }
+
+    header {
+        background-position: 20%;
+    }
+
+    header .menu,
+    .social {
+        display: none;
+    }
+
+    /* specialize and care */
+
+    .specializeText {
+        padding-bottom: 10px;
+    }
+
+    .fullBleed.specialize h2,
+    .fullBleed.care h2 {
+        margin-top: 0; 
+    }
+
+    .fullBleed.care {
+        background-position: -175% 44%; 
+
+    }
+
+    /* Give */
+
+    .giving {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    text-align: center;
+    }
+
+    .giveText h2 {
+        padding-top: 50px;
+    }
+
+    .giveImage {
+        width: 100%;
+    }
+
+    .giveText {
+        width: 100%;
+        padding-left: 0px;
+    }
+
+    .giveImage,
+    .giveText {
+        float: none;
+    }
+
+    /* connect */
+
+    .connectLinks li { 
+        width: 50%;
+    }
+
+}
+
+@media (max-width: 1060px) {
+
+       /* care and specialize  */
+
+    /* .specializeText {
+        padding: 30px 50px 53px 98px;
+    }
+
+    .careText {
+        padding: 49px 90px 43px 50px;
+    } */
+
+    .fullBleed.care {
+        background-position: -155px 39%; 
+    }
+}
+
+@media (max-width: 980px) {
+    .careText {
+        padding: 49px 90px 61px 50px;
+    }
+}
+
+@media (max-width: 880px) {
+
+    /* care and specialize section */
+    .fullBleed {
+        height: auto;
+    }
+
+    .fullBleed.specialize,
+    .fullBleed.care {
+        background-image: none;
+        height: auto;
+    }
+
+    .specializeText {
+        width: 100%;
+        padding: 45px 50px 43px;
+        text-align: center;
+        height: auto;
+    }
+    .careText {
+        width: 100%;
+        padding: 45px 50px 43px;
+        text-align: center;
+        height: auto;
+        position: static;
+        
+    } 
+
+    .specializeImage,
+    .careImage
+     {
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+    }
+     
+
+    .careImage {
+        border-image-repeat: none;
+
+    }
+
+    /* connect*/
+    
+    .connectLinks li { 
+        width: 60%;
+    }
+
+    /* footer */
+
+    .contact,
+    .update {
+        float: none;
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .contact {
+        margin-bottom: 100px;
+    }
+
+    /* HERE IS THE ISSUE */
+
+    .inputButton {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .update input {
+        padding: 10px 90px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .update button {
+        padding: 10px 143px;
+        /* margin: 0 auto;
+        text-align: center; */
+    }
+
+    footer .menu ul {
+        width: 50%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 740px) {
+    
+    /* footer */
+    
+    .menu .two {
+        padding: 90px 0; 
+
+    }
+
+    footer .menu ul {
+        width: 60%;
+    }
+    
+
+}
+
+@media (max-width: 640px) {
+    
+    /* header */
+    
+    header {
+        background-position: 33%; 
+    }
+
+    h1 {
+        font-size: 5.6rem;
+        left: 15%;
+        padding-right: 20px;
+    }
+
+    /* connect */
+
+    .connectLinks li { 
+        width: 100%;
+        font-size: 2rem;
+    }
+
+    /* the gram */
+
+    .sneakerGallery {
+        padding-bottom: 50px;
+    }
+
+    .gallery:nth-of-type(3) {
+        display: none;
+
+    }
+
+    .gallery {
+        width: calc(50% - 20px)
+    }
+
+    /* footer */
+
+    footer .menu ul {
+        width: 70%;
+    }
+}
+
+@media (max-width: 540px) {
+   
+    /* header */
+   
+    h1 {
+        font-size: 4.3rem;
+        line-height: 90px;
+        left: 20%;
+    }
+
+    /* footer */
+
+    footer .menu ul {
+        width: 90%;
+    }
+
+    /* .update input {
+        padding: 10px 50px;
+    }
+
+    .update button {
+        padding: 6px 104px;
+    } */
+}
+
+@media (max-width: 440px) {
+    
+    /* header */
+    
+    header {
+        background-position: 32%; 
+    }
+
+    h1 {
+        font-size: 4.3rem;
+        left: 15%;
+    }
+
+    /* connect */
+    
+    .connectLinks li {
+        font-size: 0.8rem;
+    }
+
+    /* footer */
+
+    .contact li,
+    .update p {
+        font-size: 0.9rem;
+    }
+
+    .update input {
+        padding: 6px 60px;
+    }
+
+    .update button {
+        padding: 8px 114px;
+    }
+
+    .menu .two {
+        padding: 45px 0;
+    }
+
+    .two li {
+        font-size: 0.8rem;
+    }
+
+}
+
+@media (max-width: 405px) {
+    
+    /* header */
+    
+    h1 {
+        font-size: 3.7rem;
+    }
+
+    /* footer */
+
+    .menu .two li {
+        padding: 10px 15px;
+    }
+
+    .update p {
+        font-size: 0.7rem;
+        margin: 0 0 10px 0;
+    }
+
+    .update input {
+        padding: 10px 36px;
+    }
+
+    .update button {
+        padding: 6px 88px;
+    }
+}
+
+@media (max-width: 360px) {
+    
+    /* header */
+    
+    h1 {
+        font-size:3.1rem;
+    }
+
+    .hamburger {
+        font-size: 1rem;
+
+    }
+
+}
+
+/* Questions:
+
+To Do:
+
+Hey, I'm having trouble sizing some items in a responsive way. I'm sitting in the main classroom 
+white space after specialize and care images at 865px- hot mess again
+
+I'm having trouble applying margin: 0 auto on two elements I'm sitting in the main classroom 
+fix the buttons at the bottom- they do not align center or margin 0 TRY BOTH (from flexbox exercise)
+
+I'm having some mysterious whitespace after a nav. I'm sitting in the main classroom. 
+white space after footer menu
+
+GO over for Dry and Indent
+go over requirements
+
+
+ */
