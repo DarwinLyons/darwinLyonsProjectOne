@@ -12,7 +12,7 @@
 <body>
 
     <header>
-        
+
         <div class="headerContainer clearfix wrapper">
             <p class="hamburger"><i class="fas fa-bars"></i></p>
             <nav class="menu">
@@ -76,20 +76,20 @@
                 </div><!-- specializeText -->
                 <div class="specializeImage">
                     <img src="assets/sneakerWall.jpg" alt="A wall of white sneakers viewed from below.">
-                </div><!-- specialize image -->
+                </div><!-- specialize image for mobile -->
             </div><!-- fullBleed specialize -->
         </article>
 
         <article>
             <div class="fullBleed care clearfix">
-                <div class="careText text ">
+                <div class="careText text">
                     <h2>Foot Care</h2>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem repudiandae impedit exercitationem temporibusadipiscifuga nostrum eaque libero fugiat laboriosam debitis.</p>
                     <a href="#">read more</a>
                 </div><!-- careText -->
                 <div class="careImage">
                     <img src="assets/handShoePink.jpg" alt="A light pink high top sneaker being caught in a hand.">
-                </div> <!-- care image -->
+                </div> <!-- care image for mobile -->
             </div> <!-- fullBleed care -->
         </article>
 
@@ -110,7 +110,7 @@
                     <li class="products">
                         <a href="#">
                             <i class="fas fa-shopping-bag" aria-hidden="true" ></i>
-                            <!-- I checked the font awesome accessibility page and they said to put this in all icons for the screen readers, even if not semantic icons -->
+                            <!-- I checked the font awesome accessibility page and they said to put aria hidden in all icons for the screen readers, even if not semantic icons -->
                             <h3>Products</h3>
                         </a>
                     </li>
@@ -133,16 +133,15 @@
         <section class="gram">
             <h2>The Gram</h2>
             <div class="sneakerGallery clearfix wrapperSmall">
-                <div class="blackSneaker gallery">
+                <div class="gallery">
                     <img src="assets/handShoeBlack.jpg" alt="A hand holding a black sneaker against a sky.">
-                </div><!-- blackSneaker -->
-                <div class="converse gallery">
+                </div><!-- gallery -->
+                <div class="gallery">
                     <img src="assets/whiteConverse.jpg" alt="A downwards shot of a person's feet in white converse shoes.">    
-                </div><!-- converse -->
-                <div class="whiteSneaker gallery">
+                </div><!-- gallery -->
+                <div class="gallery">
                     <img src="assets/handShoeWhite.jpg" alt="A hand holding a white sneaker.">
-                </div><!-- whiteSneaker -->
-
+                </div><!-- gallery -->
             </div><!-- sneakerGallery -->
         </section><!-- gram -->
 
@@ -152,18 +151,18 @@
 
         <div class="footerContainer wrapper">
             <nav class="menu">
-                <ul class="two clearfix">
+                <ul class="footerMenu clearfix">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#blog">Blog</a></li>
                     <li><a href="#contact">Contact</a></li>
-                </ul> <!-- two -->
+                </ul> <!-- footerMenu -->
             </nav><!-- menu -->
             <div class="contactUpdateContainer clearfix wrapperSmall">
                 <div class="contact">
                     <h3>Contact</h3>
                     <ul>
-                        <li>info@email.com <span class="phone">123-456-7890</span></li>
+                        <li>info@email.com  <span class="phone">123-456-7890</span></li>
                         <li>123 some road, Toronto, ON</li>
                         <li>A5A 5A5 Canada</li>
                     </ul>
@@ -174,7 +173,7 @@
                     <div class="inputButton clearfix">    
                         <label class="visuallyHidden" for="email">Email Address</label>
                         <input type="email" name="email" id="email" placeholder="email address">
-                        <button>subscribe</button>
+                        <button type="submit">subscribe</button>
                     </div><!-- inputButton -->
                 </div><!-- update -->
             </div><!-- contactUpdateContainer -->

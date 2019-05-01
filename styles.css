@@ -25,16 +25,14 @@ html {
 }
 body {
     letter-spacing: 0;
-    color: #1f2022;
-    background-color: #f4f4f4;
+    color: rgb(31, 32, 34);
+    background-color: rgb(244, 244, 244);
 }
-
 
 a {
 	text-decoration: none;
 	color: inherit;
 }
-
 
 p {
     font-family: 'Catamaran', sans-serif;
@@ -49,7 +47,6 @@ button {
     color: rgb(24, 102, 132);
     font-weight: 400;
 }
-
 
 li {
 	list-style: none;
@@ -67,7 +64,6 @@ header {
     /* Jenny said I could use the smallest size image in all cases */
     background:url(assets/headerBackground.jpg);
 	background-size: cover;
-	background-position: left-top;
 	min-height: 100vh;
 	background-repeat: no-repeat;
     background-attachment: fixed;
@@ -135,11 +131,13 @@ h1 span {
 /* end of header styles */
 
 /* beginning of main styles */
+
+/* specialize and care styles  */
+
 .specializeImage,
 .careImage {
     display: none;
 }
-
 
 .specialize,
 .care {
@@ -160,22 +158,20 @@ h1 span {
 
 }
 
-
 .specializeText,
 .careText {
     width: 50%;
     background: white;
 } 
 
-.specializeText {
+.specializeText,
+.careText {
     padding: 120px;
 }
 
 .careText {
-    padding: 120px;
     float: right;
 }
-
 
 .fullBleed a,
 /* giving <a> tag also styled here */
@@ -186,6 +182,11 @@ h1 span {
     border: 3px solid rgb(232, 91, 38);
     padding: 10px 15px;
     line-height: 29px;
+}
+
+.fullBleed a:hover,
+.giving a:hover {
+    color: rgb(232, 91, 38);
 }
 
 /* beginning of giving styles */
@@ -213,8 +214,6 @@ h1 span {
     float: left;
 }
 
-
-
 /* end of giving styles */
 
 /* beginning of connect styles  */
@@ -232,7 +231,6 @@ h1 span {
 }
 
 .connectLinks ul {
-    text-align: center;
     width: 50%;
     margin: 0 auto;
     padding: 0;
@@ -258,7 +256,7 @@ h1 span {
 
 .gram {
     text-align: center;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
 }
 
 .gram h2 {
@@ -283,7 +281,6 @@ h1 span {
 
 .gallery:nth-of-type(3) {
     margin: 0;
-    padding: 0;
 }
 
 /* end of gram styles */
@@ -292,7 +289,7 @@ h1 span {
 
 /* start of footer styles */
 
-/* footer menu styled in header */
+/* footer menu styled partially in header */
 .contactUpdateContainer {
     padding-bottom: 100px;
 }
@@ -308,7 +305,7 @@ h3 {
     margin: 0; 
 }
 
-.menu .two {
+.menu .footerMenu {
     padding: 100px 0 25px;
     color: rgb(31, 32, 34);
 }
@@ -336,7 +333,7 @@ h3 {
     margin: 0;
 }
 
-input {
+.update input {
     padding: 10px 110px 10px 30px;
 }
 
@@ -345,8 +342,12 @@ input {
     background-color: rgb(24, 102, 132);
     color: rgb(255, 255, 255);
     font-size: .9rem;
-    border: 2px solid rgb(232, 91, 38);
+    border: 3px solid rgb(232, 91, 38);
     text-transform: uppercase; 
+}
+
+.update button:hover {
+    color: rgb(232, 91, 38);
 }
 
 .copywrite {
@@ -377,7 +378,7 @@ input {
 
     /* footer  */
 
-    input {
+    .update input {
         text-align: center;
         padding: 10px 70px;
     }
@@ -388,7 +389,6 @@ input {
     }
 
 }
-
 
 @media (max-width: 1230px) {
     
@@ -404,14 +404,6 @@ input {
         padding: 0 15px 0 0;
     }
 
-
-
-    /* connect */
-
-    .connectLinks li {
-        font-size: 0.9rem;
-    }
-
 }
 
 @media (max-width: 1108px) {
@@ -421,15 +413,13 @@ input {
 }
 
 
-@media (max-width: 1065px) {
+@media (max-width: 1100px) {
     
     /* Header */
     
-    .menu {
-        font-size: 0.9rem;
-    }
     h1 {
         font-size: 5.3rem;
+        left: 41%;
     }
     
     /* connect */
@@ -440,7 +430,7 @@ input {
 
     .connectLinks li {
         float: none; 
-        width: 40%;
+        width: 50%;
         margin: 0 auto;
     }
 
@@ -467,7 +457,6 @@ input {
     }
 }
 
-
 @media (max-width: 1008px) {
     
     /* header */
@@ -489,9 +478,7 @@ input {
         background-position: 20%;
     }
 
-
     /* specialize and care */
-
 
     .specializeText,
     .careText {
@@ -508,7 +495,7 @@ input {
 
     }
 
-    /* Give */
+    /* Giving */
 
     .giving {
     padding-top: 100px;
@@ -534,12 +521,6 @@ input {
         float: none;
     }
 
-    /* connect */
-
-    .connectLinks li { 
-        width: 50%;
-    }
-
 }
 
 @media (max-width: 1060px) {
@@ -548,9 +529,8 @@ input {
     
     .specializeText,
     .careText {
-        padding: 68px;
+        padding: 70px;
     }
-
 
     .fullBleed.care {
         background-position: -155px 39%; 
@@ -560,7 +540,7 @@ input {
 
 @media (max-width: 880px) {
 
-    /* care and specialize section */
+    /* specialize and care*/
     .fullBleed {
         height: auto;
     }
@@ -571,20 +551,13 @@ input {
         height: auto;
     }
 
-    .specializeText {
+    .specializeText,
+    .careText {
         width: 100%;
-        padding: 45px 50px 43px;
+        padding: 45px 50px;
         text-align: center;
         height: auto;
     }
-    .careText {
-        width: 100%;
-        padding: 45px 50px 43px;
-        text-align: center;
-        height: auto;
-        position: static;
-        
-    } 
 
     .specializeImage,
     .careImage
@@ -599,16 +572,10 @@ input {
         width: 100%;
     }
      
-
     .careImage {
         border-image-repeat: none;
     }
 
-    /* connect*/
-    
-    .connectLinks li { 
-        width: 60%;
-    }
 
     /* footer */
 
@@ -634,26 +601,14 @@ input {
         float: none;
     }
 
-    footer .menu ul {
-        width: 50%;
-        text-align: center;
-    }
-}
-
-@media (max-width: 740px) {
-    
-    /* footer */
-    
-    .menu .two {
+    .menu .footerMenu {
         padding: 90px 0; 
-
     }
 
     footer .menu ul {
         width: 60%;
+        text-align: center;
     }
-    
-
 }
 
 @media (max-width: 640px) {
@@ -691,11 +646,6 @@ input {
         width: calc(50% - 20px)
     }
 
-    /* footer */
-
-    footer .menu ul {
-        width: 70%;
-    }
 }
 
 @media (max-width: 540px) {
@@ -710,7 +660,7 @@ input {
 
     /* footer */
 
-    footer .menu ul {
+    .menu .footerMenu {
         width: 90%;
     }
 }
@@ -744,11 +694,8 @@ input {
         padding: 8px 114px;
     }
 
-    .menu .two {
+    .menu .footerMenu {
         padding: 45px 0;
-    }
-
-    .two li {
         font-size: 0.8rem;
     }
 
@@ -762,9 +709,15 @@ input {
         font-size: 3.7rem;
     }
 
+    /* connect  */
+
+    .connectLinks li {
+        width: 120%;
+    }
+
     /* footer */
 
-    .menu .two li {
+    .menu .footerMenu li {
         padding: 10px 10px;
     }
 
@@ -773,9 +726,8 @@ input {
     }
 
     .contactUpdateContainer {
-        padding-bottom: 50px;
+        padding: 0 0 50px 0;
     }
-
 
     .update p {
         margin: 0 0 10px 0;
@@ -805,7 +757,7 @@ input {
 
     /* footer */
 
-    .menu .two li {
+    .menu .footerMenu li {
         padding: 10px 10px;
         font-size: 0.8rem; 
     }
@@ -824,16 +776,3 @@ input {
     }
 
 }
-
-/* Questions:
-
-To Do:
-
-
-I'm having some mysterious whitespace after a nav. I'm sitting in the main classroom. 
-white space after footer menu
-
-GO over for Dry and Indent
-
-
- */
